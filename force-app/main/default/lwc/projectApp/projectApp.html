@@ -21,6 +21,12 @@
                     <div class="slds-size_1-of-2 slds-p-left_xx-large">
                         <!-- Project Details Component -->
                         <c-project-details project-id={selectedProjectId} oneditproject={handleEdit}></c-project-details>
+                        
+                        <!-- Project Publisher Component -->
+                        <c-project-publisher></c-project-publisher>
+
+                        <!-- Status Bar Component -->
+                        <c-project-status-bar></c-project-status-bar>
                     </div>
                 </template>
             </div>
@@ -28,16 +34,9 @@
             <!-- Project Form Component -->
             <template if:true={showProjectFormSection}>
                 <div data-id="projectFormSection">
-                    <c-project-form onsaveproject={handleProjectSave} project-id={selectedProject}></c-project-form>
+                    <c-project-form onsaveproject={handleProjectSave} project-id={selectedProject} oncancelsave={handleCancelSave}></c-project-form>
                 </div>
             </template>
-
-            <!-- Project Publisher Component -->
-            <c-project-publisher></c-project-publisher>
-
-            <!-- Status Bar Component -->
-            <c-project-status-bar></c-project-status-bar>
-
         </div>
     </lightning-card>
 </template>
