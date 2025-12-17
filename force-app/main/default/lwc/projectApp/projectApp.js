@@ -7,7 +7,6 @@ export default class ProjectApp extends LightningElement {
     @track showProjectList = true;
     @track showProjectFormSection = false;
     @track showProjectDetail = false;
-    // showProjectForm = false;
     /**
      * Lifecycle hook: constructor()
      * Executes when the component is initialized.
@@ -154,4 +153,11 @@ export default class ProjectApp extends LightningElement {
 
         console.log('Selected Project Id for edit:', projectId);
     }
+
+    handleCancelSave(event){
+        this.showProjectList = true;
+        this.showProjectFormSection = false;
+        this.showProjectDetail = !this.showProjectDetail;
+    }
+    
 }
