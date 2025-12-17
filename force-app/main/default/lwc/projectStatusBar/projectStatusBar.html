@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Project Status Bar" icon-name="standard:task2">
+        <div class="slds-p-around_medium">
+            <template if:true={status}>
+                <p class="slds-text-title">Current Project Status:</p>
+                <span class="slds-badge slds-m-top_small {badgeClass}">{status}</span>
+            </template>
+            <template if:false={status}>
+                <p class="slds-text-body_large">No status updates available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

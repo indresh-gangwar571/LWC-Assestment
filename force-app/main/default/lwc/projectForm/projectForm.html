@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Project Form" icon-name="custom:custom96">
+        <div class="slds-p-around_medium">
+            <!-- Form Fields -->
+            <lightning-input
+                type="text"
+                name="Name"
+                label="Project Name"
+                value={formData.Name}
+                onchange={handleFieldChange}>
+            </lightning-input>
+
+            <lightning-combobox
+                name="Status__c"
+                label="Status"
+                value={formData.Status__c}
+                options={optionsStatus}
+                onchange={handleFieldChange}>
+            </lightning-combobox>
+
+            <lightning-input
+                type="date"
+                name="Start_Date__c"
+                label="Start Date"
+                value={formData.Start_Date__c}
+                onchange={handleFieldChange}>
+            </lightning-input>
+
+            <lightning-input
+                type="date"
+                name="End_Date__c"
+                label="End Date"
+                value={formData.End_Date__c}
+                onchange={handleFieldChange}>
+            </lightning-input>
+
+            <lightning-textarea
+                name="Description__c"
+                label="Description"
+                value={formData.Description__c}
+                onchange={handleFieldChange}>
+            </lightning-textarea>
+
+            <div class="slds-m-top_medium">
+                <!-- Save and Cancel Buttons -->
+                <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+                <lightning-button label="Cancel" variant="neutral" onclick={handleCancel}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

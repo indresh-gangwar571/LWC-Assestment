@@ -1,0 +1,57 @@
+/* Label styling */
+.label {
+    width: 140px;          
+    flex-shrink: 0;
+    font-weight: 600;      
+    color: #000;          
+}
+
+/* Fixed colon column */
+.colon {
+    width: 14px;          
+    text-align: left;
+    font-weight: 600;
+    color: #000;
+    margin-right: 8px;  
+}
+
+/* Value styling */
+.value {
+    flex: 1;
+    color: #000;           
+}
+
+/* Row spacing */
+.row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+/* Badge */
+.badge {
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #000;
+}
+
+/* Status colors */
+.badge-planned {
+    background-color: #1b96ff;
+}
+
+.badge-in-progress {
+    background-color: #f5a623;
+}
+
+.badge-completed {
+    background-color: #2ecc71;
+}
+
+/* Description clamp */
+.clamp {
+    line-height: 1.5;
+    max-height: 6rem;
+    overflow: hidden;
+}

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Project List" icon-name="custom:custom20">
+        <template if:true={projects}>
+            <ul class="project-list">
+                <!-- Render each project -->
+                <template for:each={projects} for:item="project">
+                    <li key={project.Id} data-id={project.Id} class="project-item" onclick={handleProjectSelect}>
+                        <div class="slds-box slds-theme_default slds-m-bottom_x-small slds-p-around_small">
+                            <h3 class="project-name">{project.Name}</h3>
+                            <p>Status: {project.Status__c}</p>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <lightning-spinner alternative-text="Loading projects" size="small"></lightning-spinner>
+            <p class="slds-text-color_error">Error loading projects: {error.message}</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Project Status Publisher" icon-name="standard:campaign">
+        <div class="slds-p-around_medium">
+            <!-- Status Dropdown -->
+            <lightning-combobox
+                name="statusSelector"
+                label="Select Project Status"
+                value={status}
+                options={optionStatus}
+                onchange={handleChange}>
+            </lightning-combobox>
+
+            <!-- Publish Button -->
+            <div class="slds-m-top_medium">
+                <lightning-button label="Publish Status" variant="brand" onclick={publishStatus} class="slds-m-top_medium"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

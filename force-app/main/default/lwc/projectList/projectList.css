@@ -1,0 +1,18 @@
+/* Project List custom styles */
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-item {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: #d8dfea;
+}
+.project-item .project-name {
+    font-weight: bold;
+}

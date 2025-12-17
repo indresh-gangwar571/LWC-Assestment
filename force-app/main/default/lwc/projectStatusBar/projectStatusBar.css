@@ -1,0 +1,21 @@
+/* Badge styling for different project statuses */
+.slds-badge {
+    font-size: 0.85rem;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.badge-planned {
+    background-color: #6B9AE6; /* Light blue for Planned status */
+}
+
+.badge-in-progress {
+    background-color: #F5A623; /* Yellow for In Progress */
+}
+
+.badge-completed {
+    background-color: #2ECC71; /* Green for Completed */
+}

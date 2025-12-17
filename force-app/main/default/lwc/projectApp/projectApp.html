@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Project Management App" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+
+            <div class="slds-grid slds-justify-end slds-m-bottom_medium">
+                <lightning-button 
+                    label="Create New Project" 
+                    variant="brand" 
+                    onclick={handleCreateNewProject}>
+                </lightning-button>
+            </div>
+
+            <div class="slds-grid">
+                <template if:true={showProjectList}>
+                    <div class="slds-size_1-of-2 slds-p-right_xx-large">
+                        <!-- Project List Component -->
+                        <c-project-list onprojectselected={handleProjectSelect}></c-project-list>
+                    </div>
+                </template>
+                <template if:true={showProjectDetail}>
+                    <div class="slds-size_1-of-2 slds-p-left_xx-large">
+                        <!-- Project Details Component -->
+                        <c-project-details project-id={selectedProjectId} oneditproject={handleEdit}></c-project-details>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Project Form Component -->
+            <template if:true={showProjectFormSection}>
+                <div data-id="projectFormSection">
+                    <c-project-form onsaveproject={handleProjectSave} project-id={selectedProject}></c-project-form>
+                </div>
+            </template>
+
+            <!-- Project Publisher Component -->
+            <c-project-publisher></c-project-publisher>
+
+            <!-- Status Bar Component -->
+            <c-project-status-bar></c-project-status-bar>
+
+        </div>
+    </lightning-card>
+</template>
