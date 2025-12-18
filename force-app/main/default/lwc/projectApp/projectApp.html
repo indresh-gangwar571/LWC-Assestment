@@ -24,9 +24,6 @@
                         
                         <!-- Project Publisher Component -->
                         <c-project-publisher></c-project-publisher>
-
-                        <!-- Status Bar Component -->
-                        <c-project-status-bar></c-project-status-bar>
                     </div>
                 </template>
             </div>
@@ -37,6 +34,9 @@
                     <c-project-form onsaveproject={handleProjectSave} project-id={selectedProject} oncancelsave={handleCancelSave}></c-project-form>
                 </div>
             </template>
+            
+            <!-- Status Bar Component -->
+            <c-project-status-bar></c-project-status-bar>
         </div>
     </lightning-card>
 </template>
